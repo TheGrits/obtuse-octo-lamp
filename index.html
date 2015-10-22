@@ -4,7 +4,23 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   </head>
   <body>
-    <script src="main.js"></script>
+    <script>
+      $(document).ready(function(){
+      var dropdown = document.getElementById("languages");
+      var selected_lan = dropdown.options[dropdown.selectedIndex].text;
+      var appending = "";
+      if (selected_lan == English){
+        appending = en;
+      } else if (selected_lan == French){
+        appending = fr;
+      } else if (selected_lan == Spanish){
+        appending = sp;
+      }
+      $('#languagedisplay').text(appending);
+      var name = appending + ".txt";
+      $('#description').load(name);
+      });
+    </script>
     <p id="description"></p>
     <p id="languagedisplay"></p>
     <select id="languages">
