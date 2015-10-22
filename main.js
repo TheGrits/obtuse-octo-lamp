@@ -8,5 +8,6 @@ if (selected_lan == English){
 } else if (selected_lan == Spanish){
   appending = sp;
 }
+document.getElementById("languagedisplay").innerHTML = appending;
 var name = appending + ".txt";
 $('#description').load(name);
