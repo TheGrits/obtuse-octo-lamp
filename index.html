@@ -6,7 +6,19 @@
   <body>
     <script>
       $(document).ready(function(){
-        $('#languagedisplay').text("Hello!");
+        var en = "Hello!";
+        var sp = "Hola!";
+        var fr = "Bonjour!";
+        var translation = "";
+        var langauge = $('#languages').find(":selected").text();
+        if (language == English){
+          translation = en;
+        } else if (language == French){
+          translation = fr;
+        } else if (language == Spanish){
+          translation = sp;
+        }
+        $('#languagedisplay').text(translation);
         $('#description').text("Does this work?");
       });
     </script>
