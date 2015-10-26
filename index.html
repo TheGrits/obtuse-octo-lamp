@@ -11,11 +11,11 @@
         var fr = "Bonjour!";
         var translation = "filler";
         var langauge = $('#languages').find(":selected").text();
-        if (language == English){
+        if ($(language) == English){
           translation = en;
-        } else if (language == French){
+        } else if ($(language) == French){
           translation = fr;
-        } else if (language == Spanish){
+        } else if ($(language) == Spanish){
           translation = sp;
         }
         $('#languagedisplay').text(en);
