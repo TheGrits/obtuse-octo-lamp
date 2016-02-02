@@ -1,30 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  </head>
   <body>
     <script>
-      $(document).ready(function(){
-        var en = "Hello!";
-        var sp = "Hola!";
-        var fr = "Bonjour!";
-        var translation = "filler";
-        var langauge = $('#languages').find(":selected").text();
-        if ($(language) == English){
-          translation = en;
-        } else if ($(language) == French){
-          translation = fr;
-        } else if ($(language) == Spanish){
-          translation = sp;
+      function go(){
+        var list = document.getElementById('languages');
+        var selected = list.options[list.selectedIndex].value;
+        if(selected == "en"){
+          document.getElementById('description').innerHTML = "Hello!";
+        } else if(selected == 'fr'){
+          document.getElementById('description').innerHTML = "Bonjour!";
+        } else if(selected == 'sp'){
+          document.getElementById('description').innerHTML = "Hola!";
         }
-        $('#languagedisplay').text(en);
-        $('#description').text("Does this work?");
-      });
+        document.getElementById('languagedisplay').innerHTML = selected;
+      }
     </script>
     <p id="description">Test 1</p>
     <p id="languagedisplay">Test 2</p>
-    <select id="languages">
+    <select id="languages" onchange="go()">
       <option value="en">English</option>
       <option value="fr">French</option>
       <option value="sp">Spanish</option>
