@@ -5,12 +5,15 @@
       var english = "Hello!";
       var french = "Bonjour!";
       var spanish = "Hola!";
+      var selected;
       window.onload = function(){
-        go();
+        selected = localStorage.getItem('savedLanguage');
+        go(selected);
       }
-      function go(){
+      function go(x){
         var list = document.getElementById('languages');
-        var selected = list.options[list.selectedIndex].value;
+        if(x == null) var selected = list.options[list.selectedIndex].value;
+        localStorage.setItem('savedLanguage', selected);
         if(selected == "en"){
           document.getElementById('description').innerHTML = english;
         } else if(selected == 'fr'){
