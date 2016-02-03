@@ -12,7 +12,7 @@
       }
       function go(x){
         var list = document.getElementById('languages');
-        if(x == null) var selected = list.options[list.selectedIndex].value;
+        if(x == null) selected = list.options[list.selectedIndex].value;
         localStorage.setItem('savedLanguage', selected);
         if(selected == "en"){
           document.getElementById('description').innerHTML = english;
