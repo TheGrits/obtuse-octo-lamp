@@ -16,13 +16,13 @@
         localStorage.setItem('savedLanguage', selected);
         if(selected == "en"){
           document.getElementById('description').innerHTML = english;
-          document.getElementById('languages').value = "English";
+          document.getElementById('languages').value = "en";
         } else if(selected == 'fr'){
           document.getElementById('description').innerHTML = french;
-          document.getElementById('languages').value = "French";
+          document.getElementById('languages').value = "fr";
         } else if(selected == 'sp'){
           document.getElementById('description').innerHTML = spanish;
-          document.getElementById('languages').value = "Spanish";
+          document.getElementById('languages').value = "sp";
         }
         document.getElementById('languagedisplay').innerHTML = selected;
       }
