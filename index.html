@@ -2,6 +2,9 @@
 <html>
   <body>
     <script>
+      var english = "Hello!";
+      var french = "Bonjour!";
+      var spanish = "Hola!";
       window.onload = function(){
         go();
       }
@@ -9,11 +12,11 @@
         var list = document.getElementById('languages');
         var selected = list.options[list.selectedIndex].value;
         if(selected == "en"){
-          document.getElementById('description').innerHTML = "Hello!";
+          document.getElementById('description').innerHTML = english;
         } else if(selected == 'fr'){
-          document.getElementById('description').innerHTML = "Bonjour!";
+          document.getElementById('description').innerHTML = french;
         } else if(selected == 'sp'){
-          document.getElementById('description').innerHTML = "Hola!";
+          document.getElementById('description').innerHTML = spanish;
         }
         document.getElementById('languagedisplay').innerHTML = selected;
       }
